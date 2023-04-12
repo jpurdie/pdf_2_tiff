@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <property name="log.level">${bundle:application:log.level}</property>
+    </Properties>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %logger{36}:%L - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="WARN" additivity="false">
+            <AppenderRef ref="console"/>
+        </Root>
+        <Logger name="com.example" level="${log.level}" additivity="false" includeLocation="true">
+            <AppenderRef ref="console"/>
+        </Logger>
+    </Loggers>
+</Configuration>
