@@ -15,7 +15,7 @@ public class ConverterTest {
     public void When_document_exists_read_bytes() throws IOException {
     byte[] myBytes =
         Converter.readBytesFromDisk(
-            "C:\\Users\\jdpurdie\\Justin\\Temp\\PDFtoTiff\\src\\test\\resources\\samplepdf.pdf");
+            "src\\test\\resources\\samplepdf.pdf");
         Assertions.assertTrue(myBytes.length > 0);
     }
 
@@ -23,7 +23,7 @@ public class ConverterTest {
     public void When_document_exists_convert() throws IOException, PDFSecurityException, PDFException, InterruptedException {
         byte[] myBytes =
                 Converter.readBytesFromDisk(
-                        "C:\\Users\\jdpurdie\\Justin\\Temp\\PDFtoTiff\\src\\test\\resources\\samplepdf.pdf");
+                        "src\\test\\resources\\samplepdf.pdf");
 
         File tempFile = Converter.convertPdf(myBytes);
 
